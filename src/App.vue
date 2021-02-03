@@ -19,6 +19,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
+	background-color: #fefcf6;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -29,8 +30,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
   box-sizing: border-box;
+}
+h1 {
+	font-family: 'Fraunces', serif;
+	font-size: 13rem;
+	word-break: break-all;
+	line-height: 0.5;
+	text-align: left;
 }
 </style>
