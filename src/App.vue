@@ -43,5 +43,6 @@ h1 {
     background: url(assets/bg.jpeg) 0 0 / cover no-repeat;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 </style>
