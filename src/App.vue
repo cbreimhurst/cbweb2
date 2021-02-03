@@ -38,7 +38,10 @@ h1 {
 	font-family: 'Fraunces', serif;
 	font-size: 13rem;
 	word-break: break-all;
-	line-height: 0.5;
+	line-height: 1;
 	text-align: left;
+    background: url(assets/bg.jpeg) 0 0 / cover no-repeat;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
 </style>
