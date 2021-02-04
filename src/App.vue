@@ -1,28 +1,9 @@
 
 
-        <template>
+<template>
   <div id="app">
-       <main>
-         <header>
-         <h1>{{title}}</h1>
-        <p>{{about}}</p>
-         </header>
-        <div v-if="!this.$store.state.posts" class="u-align-center">
-          
-        </div>
-      <div v-if="this.$store.state.posts" class="flex-posts">
+         <router-view></router-view>
 
-        <a :href="`blog/${post.slug}`" class="post" v-for="post in this.$store.state.posts" :key="post.id">
-          <h3>
-           {{ post.title.rendered }}
-          </h3>
-          <small>{{ post.date }}</small>
-          <p v-html="post.excerpt.rendered"></p>
-          <p class="readmore slide">Read more ⟶</p>
-        </a>
-
-      </div>
-      </main>
   </div>
 </template>
 
@@ -36,38 +17,35 @@ export default {
   data() {
     return {
       title: 'Chris Breimhurst',
-      about: '',
-      // selectedTag: null,
-      // activeClass: "active"
+      about: 'Web developer, producer of online media, & branding consultant ',
+      copyright: '© 2021',
+      selectedTag: null,
+      activeClass: "active"
     };
   },
   computed: {
-    // posts() {
-    //   return this.$store.state.posts;
-    // },
-    // tags() {
-    //   return this.$store.state.tags;
-    // },
-    // sortedPosts() {
-    //   if (!this.selectedTag) return this.posts;
-    //   return this.posts.filter(el => el.tags.includes(this.selectedTag));
-    // }
+    posts() {
+      return this.$store.state.posts;
+    },
+    tags() {
+      return this.$store.state.tags;
+    },
+    sortedPosts() {
+      if (!this.selectedTag) return this.posts;
+      return this.posts.filter(el => el.tags.includes(this.selectedTag));
+    }
   },
   created() {
     this.$store.dispatch('getPosts')
   },
   methods: {
-    // updateTag(tag) {
-    //   if (!this.selectedTag) {
-    //     this.selectedTag = tag.id;
-    //   } else {
-    //     this.selectedTag = null;
-    //   }
-    // },
-      // increment() {
-      //   this.$store.commit('increment')
-      //   console.log(this.$store.state.count)
-      // }
+    updateTag(tag) {
+      if (!this.selectedTag) {
+        this.selectedTag = tag.id;
+      } else {
+        this.selectedTag = null;
+      }
+    },
   }
 }
 </script>
@@ -99,6 +77,13 @@ h1 {
 	line-height: 1;
 	text-align: left;
 }
+
+.individual h1 {
+  font-size: 5.4rem;
+  word-break: break-word;
+}
+
+
 main {
 margin: 125px auto;
   max-width: 900px;
@@ -125,6 +110,9 @@ main a {
 	padding: 40px;
 	border-width: 17px;
 	width: 48%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 .flex-posts .post h3 {
 	font-size: 2rem;
@@ -136,10 +124,50 @@ main a {
 	text-decoration: none;
 }
 
+
+.readmore.slide {
+  margin-top: auto;
+}
+
+
 @media screen and (max-width: 668px) {
   .flex-posts .post {
     margin: 0 0 30px 0;
     width: 100%;
+  }
+}
+
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #2c3e50;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
   }
 }
 </style>

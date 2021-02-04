@@ -1,13 +1,13 @@
 <template>
   <main class="post individual">
     <h1>{{ post.title.rendered }}</h1>
-    <small class="date">{{ post.date | dateformat }}</small>
+    <small class="date">{{ post.date  }}</small>
     <section v-html="post.content.rendered"></section>
-    {{ post.content.rendered }}
   </main>
 </template>
 
 <script>
+
 export default {
   computed: {
     posts() {
@@ -28,6 +28,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+main {
+  text-align: left;
+}
 </style>
