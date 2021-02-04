@@ -1,15 +1,24 @@
-<template>
+
+
+        <template>
   <div id="app">
        <main>
          <h1>{{msg}}</h1>
-        <!-- <div class="post" v-for="post in sortedPosts" :key="post.id">
+        <div v-if="!this.$store.state.posts" class="u-align-center">
+          
+        </div>
+      <div v-if="this.$store.state.posts" class="flex-posts">
+
+        <div class="post" v-for="post in this.$store.state.posts" :key="post.id">
           <h3>
             <a :href="`blog/${post.slug}`">{{ post.title.rendered }}</a>
           </h3>
           <small>{{ post.date }}</small>
           <div v-html="post.excerpt.rendered"></div>
           <a :href="`blog/${post.slug}`" class="readmore slide">Read more ⟶</a>
-        </div> -->
+        </div>
+
+      </div>
       </main>
   </div>
 </template>
@@ -41,7 +50,7 @@ export default {
     // }
   },
   created() {
-   // this.$store.dispatch("getPosts");
+    this.$store.dispatch('getPosts')
   },
   methods: {
     // updateTag(tag) {
@@ -79,14 +88,41 @@ body {
   box-sizing: border-box;
 }
 h1 {
+  margin-top: 0;
 	font-family: 'Fraunces', serif;
-	font-size: 13rem;
+	font-size: 11.7rem;
 	word-break: break-all;
 	line-height: 1;
 	text-align: left;
-    background: url(/img/chris.b238fc8c.png) 0 0 / 40% repeat;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-    background-clip: text;
+}
+main {
+margin: 125px auto;
+  max-width: 900px;
+}
+main a {
+	color: #2c3e50;
+	font-weight: 900;
+}
+.flex-posts {
+	display: flex;
+	flex-flow: row wrap;
+}
+.flex-posts .post {
+	box-sizing: border-box;
+	text-align: left;
+	border: solid;
+	margin: 0 1% 30px 0;
+	padding: 40px;
+	border-width: 17px;
+	width: 48%;
+}
+.flex-posts .post h3 {
+	font-size: 2rem;
+	text-decoration: none;
+	margin-top: 0;
+	line-height: 1;
+}
+.flex-posts .post h3 a {
+	text-decoration: none;
 }
 </style>
