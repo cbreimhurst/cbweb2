@@ -3,20 +3,23 @@
         <template>
   <div id="app">
        <main>
-         <h1>{{msg}}</h1>
+         <header>
+         <h1>{{title}}</h1>
+        <p>{{about}}</p>
+         </header>
         <div v-if="!this.$store.state.posts" class="u-align-center">
           
         </div>
       <div v-if="this.$store.state.posts" class="flex-posts">
 
-        <div class="post" v-for="post in this.$store.state.posts" :key="post.id">
+        <a :href="`blog/${post.slug}`" class="post" v-for="post in this.$store.state.posts" :key="post.id">
           <h3>
-            <a :href="`blog/${post.slug}`">{{ post.title.rendered }}</a>
+           {{ post.title.rendered }}
           </h3>
           <small>{{ post.date }}</small>
-          <div v-html="post.excerpt.rendered"></div>
-          <a :href="`blog/${post.slug}`" class="readmore slide">Read more ⟶</a>
-        </div>
+          <p v-html="post.excerpt.rendered"></p>
+          <p class="readmore slide">Read more ⟶</p>
+        </a>
 
       </div>
       </main>
@@ -32,7 +35,8 @@ export default {
   },
   data() {
     return {
-      msg: 'Chris Breimhurst',
+      title: 'Chris Breimhurst',
+      about: '',
       // selectedTag: null,
       // activeClass: "active"
     };
@@ -108,6 +112,10 @@ main a {
 .flex-posts {
 	display: flex;
 	flex-flow: row wrap;
+  text-decoration: none;
+}
+.flex-posts * {
+  text-decoration: none;
 }
 .flex-posts .post {
 	box-sizing: border-box;
