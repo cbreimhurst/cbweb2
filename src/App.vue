@@ -98,6 +98,8 @@ h1 {
 main {
 margin: 125px auto;
   max-width: 900px;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 main a {
 	color: #2c3e50;
@@ -124,5 +126,12 @@ main a {
 }
 .flex-posts .post h3 a {
 	text-decoration: none;
+}
+
+@media screen and (max-width: 668px) {
+  .flex-posts .post {
+    margin: 0 0 30px 0;
+    width: 100%;
+  }
 }
 </style>
