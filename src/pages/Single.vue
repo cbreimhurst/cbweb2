@@ -52,7 +52,7 @@ section h3 {
 }
 
 section a {
-  	word-break: break-all;
+      word-break: break-all;
 }
 
 @media screen and (max-width: 668px) {

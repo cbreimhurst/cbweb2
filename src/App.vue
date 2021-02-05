@@ -53,7 +53,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-	background-color: #fefcf6;
+    background-color: #fefcf6;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -67,11 +67,11 @@ body {
 }
 h1 {
   margin-top: 0;
-	font-family: 'Fraunces', serif;
-	font-size: 11.7rem;
-	word-break: break-all;
-	line-height: 1;
-	text-align: left;
+    font-family: 'Fraunces', serif;
+    font-size: 11.7rem;
+    word-break: break-all;
+    line-height: 1;
+    text-align: left;
 }
 
 .individual h1 {
@@ -87,39 +87,39 @@ margin: 125px auto;
   box-sizing: border-box;
 }
 main a {
-	color: #2c3e50;
-	font-weight: 900;
+    color: #2c3e50;
+    font-weight: 900;
 }
 
 
 .flex-posts {
-	display: flex;
-	flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
   text-decoration: none;
 }
 .flex-posts * {
   text-decoration: none;
 }
 .flex-posts .post {
-	box-sizing: border-box;
-	text-align: left;
-	border: solid;
-	margin: 0 1% 30px 0;
-	padding: 40px;
-	border-width: 17px;
-	width: 48%;
+    box-sizing: border-box;
+    text-align: left;
+    border: solid;
+    margin: 0 1% 30px 0;
+    padding: 40px;
+    border-width: 17px;
+    width: 48%;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
 }
 .flex-posts .post h3 {
-	font-size: 2rem;
-	text-decoration: none;
-	margin-top: 0;
-	line-height: 1;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-top: 0;
+    line-height: 1;
 }
 .flex-posts .post h3 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 
@@ -166,7 +166,7 @@ main a {
 
 @media screen and (max-width: 668px) {
   h1 {
-	font-size: 6.7rem;
+    font-size: 6.7rem;
   }
   .flex-posts .post {
     margin: 0 0 30px 0;
