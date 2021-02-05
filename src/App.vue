@@ -131,6 +131,7 @@ main a {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  border-radius: 5px;
 }
 .flex-posts .post h3 {
 
