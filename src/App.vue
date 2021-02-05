@@ -3,7 +3,6 @@
 <template>
   <div id="app">
          <router-view></router-view>
-
   </div>
 </template>
 
@@ -91,6 +90,8 @@ main a {
 	color: #2c3e50;
 	font-weight: 900;
 }
+
+
 .flex-posts {
 	display: flex;
 	flex-flow: row wrap;
@@ -127,13 +128,6 @@ main a {
 }
 
 
-@media screen and (max-width: 668px) {
-  .flex-posts .post {
-    margin: 0 0 30px 0;
-    width: 100%;
-  }
-}
-
 
 .lds-ripple {
   display: inline-block;
@@ -167,4 +161,17 @@ main a {
     opacity: 0;
   }
 }
+
+
+
+@media screen and (max-width: 668px) {
+  h1 {
+	font-size: 6.7rem;
+  }
+  .flex-posts .post {
+    margin: 0 0 30px 0;
+    width: 100%;
+  }
+}
+
 </style>

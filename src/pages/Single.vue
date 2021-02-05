@@ -51,4 +51,17 @@ section h3 {
   font-weight: 900;
 }
 
+section a {
+  	word-break: break-all;
+}
+
+@media screen and (max-width: 668px) {
+section {
+  font-size: 1.1rem;
+}
+
+section h3 {
+  font-size: 1.4rem;
+}
+}
 </style>
