@@ -10,6 +10,7 @@
 
 <script>
 
+
 export default {
   computed: {
     posts() {
@@ -22,8 +23,9 @@ export default {
   filters: {
     dateformat: function(value){
       let date = new Date(value)
-      console.log(date)
+      //console.log(date)
       return date
+      //return dayjs(date).format('LLLL');
     }
   },
   data() {
