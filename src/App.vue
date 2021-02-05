@@ -96,6 +96,7 @@ main a {
     display: flex;
     flex-flow: row wrap;
   text-decoration: none;
+  justify-content: center;
 }
 .flex-posts * {
   text-decoration: none;

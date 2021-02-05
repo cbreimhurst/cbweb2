@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/pages/Home'
 import Single from '@/pages/Single'
 import Contact from '@/pages/Contact'
+import NotFound from '@/pages/NotFound'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/contact',
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '*',
+      name: 'Not Found',
+      component: NotFound
     }
   ]
 })
