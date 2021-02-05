@@ -25,6 +25,9 @@ export default {
     };
   },
   computed: {
+    info() {
+      return this.$store.state.info;
+    },
     posts() {
       return this.$store.state.posts;
     },
@@ -38,6 +41,7 @@ export default {
   },
   created() {
     this.$store.dispatch('getPosts')
+    this.$store.dispatch('getInfo')
   },
   methods: {
     updateTag(tag) {

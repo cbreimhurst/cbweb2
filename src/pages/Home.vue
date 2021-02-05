@@ -1,8 +1,8 @@
 <template>
       <main>
-         <header>
-         <h1>{{title}}</h1>
-        <p>{{about}}</p>
+         <header v-if="this.info">
+         <h1>{{info.name}}</h1>
+        <p>{{info.description}}</p>
          </header>
         <div v-if="!this.$store.state.posts" class="u-align-center">
           <div class="lds-ripple"><div></div><div></div></div>
@@ -40,6 +40,9 @@ export default {
     };
   },
   computed: {
+    info() {
+      return this.$store.state.info;
+    },
     posts() {
       return this.$store.state.posts;
     },
@@ -53,6 +56,7 @@ export default {
   },
   created() {
     this.$store.dispatch('getPosts')
+    this.$store.dispatch('getInfo')
   },
   filters: {
     dateformat: function(value){
