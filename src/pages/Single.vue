@@ -2,7 +2,7 @@
 
   <main class="post individual" v-if="posts">
     <h1>{{ post.title.rendered }}</h1>
-    <small class="date">{{ post.date  }}</small>
+    <small class="date">{{ post.date | dateformat}}</small>
     <section v-html="post.content.rendered"></section>
     <a href="/">see all posts</a>
   </main>
@@ -17,6 +17,13 @@ export default {
     },
     post() {
       return this.posts.find(el => el.slug === this.slug);
+    }
+  },
+  filters: {
+    dateformat: function(value){
+      let date = new Date(value)
+      console.log(date)
+      return date
     }
   },
   data() {
@@ -34,4 +41,14 @@ export default {
 main {
   text-align: left;
 }
+
+section {
+  font-size: 1.5rem;
+}
+
+section h3 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
 </style>
