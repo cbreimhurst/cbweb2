@@ -13,7 +13,7 @@
           <h3>
            {{ post.title.rendered }}
           </h3>
-          <small>{{ post.date }}</small>
+          <small>{{ post.date | dateformat}}</small>
           <p v-html="post.excerpt.rendered"></p>
           <p class="readmore slide">Read more ⟶</p>
         </a>
@@ -53,6 +53,14 @@ export default {
   },
   created() {
     this.$store.dispatch('getPosts')
+  },
+  filters: {
+    dateformat: function(value){
+      let date = new Date(value)
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',    'November', 'December'];
+      return months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
+
+    }
   },
   methods: {
     updateTag(tag) {

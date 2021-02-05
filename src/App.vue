@@ -78,11 +78,20 @@ body {
 h1 {
   margin-top: 0;
     font-family: 'Fraunces', serif;
-    font-size: 11.7rem;
+    font-size: 5.4rem;
     word-break: break-all;
     line-height: 1;
     text-align: left;
+  margin-bottom: 0;
+  text-align: center;
 }
+
+
+header p {
+  margin-top: 0;
+  margin-bottom: 6rem;
+}
+
 
 .individual h1 {
   font-size: 5.4rem;
@@ -124,6 +133,8 @@ main a {
   justify-content: space-between;
 }
 .flex-posts .post h3 {
+
+    font-family: 'Fraunces', serif;
     font-size: 2rem;
     text-decoration: none;
     margin-top: 0;
