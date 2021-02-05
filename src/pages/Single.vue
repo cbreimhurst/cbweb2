@@ -1,8 +1,10 @@
 <template>
-  <main class="post individual">
+
+  <main class="post individual" v-if="posts">
     <h1>{{ post.title.rendered }}</h1>
     <small class="date">{{ post.date  }}</small>
     <section v-html="post.content.rendered"></section>
+    <a href="/">see all posts</a>
   </main>
 </template>
 

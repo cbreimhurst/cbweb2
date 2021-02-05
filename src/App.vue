@@ -62,9 +62,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   max-width: 100vw;
   box-sizing: border-box;
