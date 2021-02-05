@@ -2,7 +2,9 @@
 
 <template>
   <div id="app">
+    <transition name="fade">
          <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -16,7 +18,7 @@ export default {
   data() {
     return {
       title: 'Chris Breimhurst',
-      about: 'Web developer, producer of online media, & branding consultant ',
+      about: 'Commercial artist, web developer, & branding specialist from Lancaster, Pennsylvania.',
       copyright: '© 2021',
       selectedTag: null,
       activeClass: "active"
@@ -50,6 +52,14 @@ export default {
 </script>
 
 <style>
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .75s ease;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
