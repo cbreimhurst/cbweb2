@@ -94,8 +94,8 @@ header p {
 
 
 .individual h1 {
-  font-size: 5.4rem;
   word-break: break-word;
+  text-align: left;
 }
 
 
@@ -188,7 +188,7 @@ main a {
 
 @media screen and (max-width: 668px) {
   h1 {
-    font-size: 6.7rem;
+    font-size: 3.7rem;
   }
   .flex-posts .post {
     margin: 0 0 30px 0;
