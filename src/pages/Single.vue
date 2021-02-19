@@ -1,10 +1,16 @@
 <template>
 
-  <main class="post individual" v-if="posts">
+
+  <main class="post individual">
+    <div v-if="!posts">
+    <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+    <article v-if="posts">
     <h1>{{ post.title.rendered }}</h1>
     <small class="date">{{ post.date | dateformat}}</small>
     <section v-html="post.content.rendered"></section>
     <a href="/">see all posts</a>
+    </article>
   </main>
 </template>
 
@@ -12,12 +18,18 @@
 
 
 export default {
+
   computed: {
     posts() {
       return this.$store.state.posts;
     },
     post() {
       return this.posts.find(el => el.slug === this.slug);
+    }
+  },
+  metaInfo () {
+    return {
+      title: this.post.title.rendered
     }
   },
   filters: {
