@@ -1,8 +1,8 @@
 <template>
       <main>
          <header v-if="this.info">
-         <h1>{{info.name}}</h1>
-        <p>{{info.description}}</p>
+         <h1 v-html="info.name"></h1>
+        <p v-html="info.description"></p>
          </header>
         <div v-if="!this.$store.state.posts" class="u-align-center">
           <div class="lds-ripple"><div></div><div></div></div>
@@ -10,16 +10,14 @@
       <div v-if="this.posts" class="flex-posts">
 
         <a :href="`blog/${post.slug}`" class="post" v-for="post in posts" :key="post.id">
-          <h3>
-           {{ post.title.rendered }}
-          </h3>
-          <small>{{ post.date | dateformat}}</small>
+          <h3 v-html="post.title.rendered"></h3>
+          <small>{{post.date | dateformat }}</small>
           <p v-html="post.excerpt.rendered"></p>
           <p class="readmore slide">Read more ⟶</p>
         </a>
 
       </div>
-        <p class="copyright">{{copyright}}</p>
+        <p class="copyright" v-html="copyright"></p>
       </main>
 </template>
 
@@ -32,8 +30,6 @@ export default {
   },
   data() {
     return {
-      title: 'Chris Breimhurst',
-      about: 'Web developer, producer of online media, & branding consultant ',
       copyright: '© 2021',
       selectedTag: null,
       activeClass: "active"
