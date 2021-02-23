@@ -6,7 +6,7 @@
     <div class="lds-ripple"><div></div><div></div></div>
     </div>
     <article v-if="posts">
-    <h1>{{ post.title.rendered }}</h1>
+    <h1 v-html="post.title.rendered"></h1>
     <small class="date">{{ post.date | dateformat}}</small>
     <section v-html="post.content.rendered"></section>
     <a href="/" class="see-all"><svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M10 14L3 7.5 10 1" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>see all posts</a>
@@ -72,4 +72,25 @@ section a {
 .see-all svg {
     transform: translate(-6px,3px);
 }
+
+
+
+figure {
+  max-width: 100%;
+}
+
+figure img {
+  max-width: 100%;
+}
+
+figure figcaption {
+  font-size: clamp(0.6rem,4.1vw,0.9rem);
+  padding: 1rem;
+}
+
+figure img {
+  mix-blend-mode: multiply;
+  height: auto;
+}
+
 </style>
