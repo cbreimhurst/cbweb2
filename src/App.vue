@@ -121,7 +121,7 @@ h1 {
   margin-top: 0;
     font-family: 'Fraunces', serif;
     font-size: 5.4rem;
-    font-size: clamp(2.8rem, 9vw, 5.9rem);
+    font-size: clamp(1.9rem, 9vw, 5.9rem);
     word-break: break-all;
     line-height: 1;
     text-align: left;
