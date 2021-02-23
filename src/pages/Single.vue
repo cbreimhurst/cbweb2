@@ -53,7 +53,8 @@ export default {
 };
 </script>
 
-<style scoped>main {
+<style scoped>
+main {
   text-align: left;
 }
 
