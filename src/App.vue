@@ -278,6 +278,9 @@ code {
     display: inline-block;
     padding: 2rem;
     font-size: 1rem;
+    max-width: 100%;
+box-sizing: border-box;
+overflow-y: scroll;
 }
 
 </style>
