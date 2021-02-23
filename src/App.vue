@@ -121,7 +121,7 @@ h1 {
   margin-top: 0;
     font-family: 'Fraunces', serif;
     font-size: 5.4rem;
-    font-size: clamp(2.3rem, 9vw, 5.4rem);
+    font-size: clamp(2.8rem, 9vw, 5.9rem);
     word-break: break-all;
     line-height: 1;
     text-align: left;
@@ -189,10 +189,10 @@ text-decoration-thickness: 0.3rem;
 }
 
 .flex-posts .post {
-    margin: 0 0% 30px 0;
+    margin: 0;
     width: 100%;
 }
-  }
+}
   
 .flex-posts .post h3 {
     font-family: 'Fraunces', serif;
@@ -253,10 +253,22 @@ text-decoration-thickness: 0.3rem;
 
 
 @media screen and (max-width: 668px) {
+  
   .flex-posts .post {
     margin: 0 0 30px 0;
     width: 100%;
   }
+
+  @supports (grid-template-rows: masonry) {
+.flex-posts {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: masonry;
+  grid-gap: 1rem;
+}
+
+
+}
 }
 
 
