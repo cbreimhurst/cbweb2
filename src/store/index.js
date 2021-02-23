@@ -2,7 +2,7 @@ const postREST = "https://data.christopherbreimhurst.com/wp-json/wp/v2/posts?pag
 const siteREST = "https://data.christopherbreimhurst.com/wp-json/"
 
 import axios from 'axios'
-import 'core-js/es/promise'
+//import 'core-js/es/promise'
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)

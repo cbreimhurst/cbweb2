@@ -1,7 +1,7 @@
-
-
 <template>
   <div id="app">
+    <pre style="text-align: left;">
+    </pre>
     <transition name="fade">
          <router-view></router-view>
     </transition>
@@ -15,6 +15,7 @@ export default {
   metaInfo: {
       // if no subcomponents specify a metaInfo.title, this title will be used
       title: 'Chris Breimhurst',
+      //title: this.$store.state.isLoading ? 'Loading...' : 'Chris Breimhurst',
       // all titles will be injected into this template
       titleTemplate: '%s | Web Developer'
   },
@@ -30,6 +31,8 @@ export default {
       activeClass: "active"
     };
   },
+
+
   computed: {
     info() {
       return this.$store.state.info;
@@ -45,11 +48,34 @@ export default {
       return this.posts.filter(el => el.tags.includes(this.selectedTag));
     }
   },
-  created() {
-    this.$store.dispatch('getPosts')
-    this.$store.dispatch('getInfo')
+
+  serverPrefetch () {
+    // return the Promise from the action
+    // so that the component waits before rendering
+    return this.fetchPosts() 
   },
+
+  mounted () {
+    // If we didn't already do it on the server
+    // we fetch the item (will first show the loading text)
+    if (!this.posts) {
+      this.fetchPosts()
+    }
+    if (!this.info) {
+      this.fetchInfo()
+    }
+  },
+
+
   methods: {
+    fetchPosts () {
+      // return the Promise from the action
+      return this.$store.dispatch('getPosts')
+    },
+    fetchInfo () {
+      // return the Promise from the action
+      return this.$store.dispatch('getInfo')
+    },
     updateTag(tag) {
       if (!this.selectedTag) {
         this.selectedTag = tag.id;
@@ -62,6 +88,12 @@ export default {
 </script>
 
 <style>
+
+
+
+:root {
+  --highlight: #c4c238;
+}
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity .75s ease;
@@ -89,6 +121,7 @@ h1 {
   margin-top: 0;
     font-family: 'Fraunces', serif;
     font-size: 5.4rem;
+    font-size: clamp(2.3rem, 9vw, 5.4rem);
     word-break: break-all;
     line-height: 1;
     text-align: left;
@@ -118,6 +151,8 @@ margin: 125px auto;
 main a {
     color: #2c3e50;
     font-weight: 900;
+    text-decoration-color: var(--highlight);
+text-decoration-thickness: 0.3rem;
 }
 
 
@@ -143,11 +178,28 @@ main a {
   justify-content: space-between;
   border-radius: 5px;
 }
-.flex-posts .post h3 {
 
+
+@supports (grid-template-rows: masonry) {
+.flex-posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: masonry;
+  grid-gap: 1rem;
+}
+
+.flex-posts .post {
+    margin: 0 0% 30px 0;
+    width: 100%;
+}
+  }
+  
+.flex-posts .post h3 {
     font-family: 'Fraunces', serif;
     font-size: 2rem;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--highlight);
+text-decoration-thickness: 0.3rem;
     margin-top: 0;
     line-height: 1;
 }
@@ -158,6 +210,9 @@ main a {
 
 .readmore.slide {
   margin-top: auto;
+    text-decoration: underline;
+  text-decoration-color: var(--highlight);
+text-decoration-thickness: 0.3rem;
 }
 
 
@@ -198,13 +253,19 @@ main a {
 
 
 @media screen and (max-width: 668px) {
-  h1 {
-    font-size: 3.7rem;
-  }
   .flex-posts .post {
     margin: 0 0 30px 0;
     width: 100%;
   }
+}
+
+
+code {
+    border-radius: 5px;
+    background: #00000008;
+    display: inline-block;
+    padding: 2rem;
+    font-size: 1rem;
 }
 
 </style>

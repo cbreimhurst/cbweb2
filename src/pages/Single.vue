@@ -29,7 +29,6 @@ export default {
   },
   metaInfo () {
     return {
-     // title: this.post.title.rendered;
       title: this.$store.state.isLoading ? 'Loading...' : this.post.title.rendered
     }
   },
@@ -46,9 +45,23 @@ export default {
       slug: this.$route.params.slug
     };
   },
-  created() {
+
+
+    serverPrefetch () {
+    return this.fetchPosts() 
+  },
+
+methods: {
+      fetchPosts () {
     this.$store.dispatch("getPosts");
-  }
+    },
+},
+
+    mounted () {
+    if (!this.posts) {
+      this.fetchPosts()
+    }
+  },
 };
 </script>
 
@@ -58,11 +71,11 @@ main {
 }
 
 section {
-  font-size: 1.5rem;
+ font-size: clamp(1rem, 4.1vw, 1.5rem);
 }
 
 section h3 {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   font-weight: 900;
 }
 
@@ -71,12 +84,9 @@ section a {
 }
 
 @media screen and (max-width: 668px) {
-section {
-  font-size: 1.1rem;
-}
 
-section h3 {
+/* section h3 {
   font-size: 1.4rem;
-}
+} */
 }
 </style>

@@ -13,7 +13,7 @@
           <h3 v-html="post.title.rendered"></h3>
           <small>{{post.date | dateformat }}</small>
           <p v-html="post.excerpt.rendered"></p>
-          <p class="readmore slide">Read more ⟶</p>
+          <p class="readmore slide">Read more <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M6.5 10.5l3-3-3-3" stroke="currentColor" stroke-linecap="square"></path></svg></p>
         </a>
 
       </div>
