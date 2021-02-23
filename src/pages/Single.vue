@@ -9,7 +9,7 @@
     <h1>{{ post.title.rendered }}</h1>
     <small class="date">{{ post.date | dateformat}}</small>
     <section v-html="post.content.rendered"></section>
-    <a href="/">see all posts</a>
+    <a href="/" class="see-all"><svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M10 14L3 7.5 10 1" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>see all posts</a>
     </article>
   </main>
 </template>
@@ -67,5 +67,9 @@ section h3 {
 
 section a {
       word-break: break-all;
+}
+
+.see-all svg {
+    transform: translate(-6px,3px);
 }
 </style>

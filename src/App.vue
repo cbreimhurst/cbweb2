@@ -5,6 +5,8 @@
     <transition name="fade">
          <router-view></router-view>
     </transition>
+
+        <p class="copyright" v-html="copyright"></p>
   </div>
 </template>
 
@@ -26,7 +28,7 @@ export default {
     return {
       title: 'Chris Breimhurst',
       about: 'Commercial artist, web developer, & branding specialist from Lancaster, Pennsylvania.',
-      copyright: '© 2021',
+      copyright: '© 2021 Chris Breimhurst',
       selectedTag: null,
       activeClass: "active"
     };
@@ -215,6 +217,9 @@ text-decoration-thickness: 0.3rem;
 text-decoration-thickness: 0.3rem;
 }
 
+.readmore svg {
+    transform: translate(6px,3px);
+}
 
 
 .lds-ripple {
