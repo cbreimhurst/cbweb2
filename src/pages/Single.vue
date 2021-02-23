@@ -29,7 +29,8 @@ export default {
   },
   metaInfo () {
     return {
-      title: this.post.title.rendered
+     // title: this.post.title.rendered;
+      title: this.$store.state.isLoading ? 'Loading...' : this.post.title.rendered
     }
   },
   filters: {
