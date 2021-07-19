@@ -1,5 +1,7 @@
-const postREST = "https://data.christopherbreimhurst.com/wp-json/wp/v2/posts?page=1&per_page=20&_embed=1"
-const siteREST = "https://data.christopherbreimhurst.com/wp-json/"
+// const postREST = "https://data.christopherbreimhurst.com/wp-json/wp/v2/posts?page=1&per_page=20&_embed=1"
+// const siteREST = "https://data.christopherbreimhurst.com/wp-json/"
+const postREST = "https://oneunitedlancaster.com/wp-json/wp/v2/posts?page=1&per_page=20&_embed=1"
+const siteREST = "https://oneunitedlancaster.com/wp-json/"
 
 import axios from 'axios'
 //import 'core-js/es/promise'
