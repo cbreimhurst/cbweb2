@@ -122,7 +122,7 @@ body {
   box-sizing: border-box;
 }
 
-header {
+main > header {
 	text-align: center;
 }
 
