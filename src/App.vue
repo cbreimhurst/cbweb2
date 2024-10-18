@@ -296,6 +296,10 @@ text-decoration-thickness: 0.3rem;
   grid-gap: 1rem;
 }
 
+main .note a {
+	padding: 20px 30px;
+	font-size: 1rem;
+}
 
 }
 }
