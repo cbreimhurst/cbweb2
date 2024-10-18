@@ -1,7 +1,7 @@
 <template>
     <main class="post individual">
-        <h2 class="pre-title">Chris Breimhurst</h2>
-      <h1>Resume</h1>
+        <section id="intro">
+      <h1>Résumé</h1>
 
       <p class="note">
 <a href="https://data.christopherbreimhurst.com/wp-content/uploads/2024/10/Chris-Breimhurst-Resume.pdf" target="_blank">
@@ -10,7 +10,7 @@
     </p>
     <p><small>Updated: <em>October 18, 2024</em></small></p>
 
-      <section id="intro">
+      
     
     <ul>
         <li>Web Developer­</li>
@@ -227,8 +227,8 @@
   
   <style scoped>
 
-.pre-title {
-	margin-bottom: -14px;
+#intro {
+	width: 100%;
 }
 
 section strong, section h2 {

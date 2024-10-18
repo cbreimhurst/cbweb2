@@ -38,5 +38,7 @@ export default {
 </script>
 
 <style scoped>
-
+h1 + p {
+  margin-top: 40px;
+}
 </style>

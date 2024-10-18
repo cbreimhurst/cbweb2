@@ -3,7 +3,12 @@
 
   <main class="post individual">
     <div v-if="!posts">
-    <div class="lds-ripple"><div></div><div></div></div>
+      <section class="posts-loading">
+        <div class="lds-ripple">
+          <div></div>
+          <div></div>
+        </div>
+      </section>
     </div>
     <article v-if="posts">
     <h1 v-html="post.title.rendered"></h1>
