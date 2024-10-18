@@ -3,11 +3,14 @@
         <h2 class="pre-title">Chris Breimhurst</h2>
       <h1>Resume</h1>
 
-<a href="https://data.christopherbreimhurst.com/wp-content/uploads/2024/10/Chris-Breimhurst-Resume.pdf">
-      <button>Download PDF</button>
+      <p class="note">
+<a href="https://data.christopherbreimhurst.com/wp-content/uploads/2024/10/Chris-Breimhurst-Resume.pdf" target="_blank">
+      Download PDF
       </a>
+    </p>
+    <p><small>Updated: October 18, 2024</small></p>
 
-<section>
+      <section>
     
     <ul>
         <li>Web Developer­</li>
@@ -104,41 +107,40 @@
     </ul>
 </section>
 
-<section>
+<section id="work">
     
     
     <h2>Examples of Work</h2>
     
     <h3>Web Design & Development:</h3>
     <ul>
-        <li>Coming soon: delcopa.gov</li>
-        <li>(design only - site in final stages of development - to be launched on or soon after November 9, 2024)</li>
-        <li>https://careerreadylancaster.com/</li>
-        <li>https://www.lancastercountywib.com/</li>
-        <li>https://www.uwlanc.org</li>
-        <li>https://oneunitedlancaster.com/</li>
-        <li>https://illuccixhcp.com/ (development only)</li>
-        <li>https://illuccix.com/ (development only)</li>
-        <li>https://horseinnlancaster.com/</li>
-        <li>https://philthygood.com/</li>
-        <li>https://columbiapamarkethouse.org/</li>
-        <li>https://first10lancaster.com/</li>
-        <li>https://lititzpride.org/</li>
-        <li>https://lancastercountycase.com/</li>
-        <li>https://jessicasmucker.com/</li>
-        <li>https://somervillemanning.com/</li>
-        <li>https://heyjinx.com/</li>
-        <li>https://lanc.care/</li>
+        <li>Coming soon: delcopa.gov<br><small>(design only - site in final stages of development - to be launched on or soon after November 9, 2024)</small></li>
+        <li><a href="https://careerreadylancaster.com/" target="_blank">Career Ready Lancaster!</a></li>
+        <li><a href="https://www.lancastercountywib.com/" target="_blank">Lancaster County Workforce Development Board</a></li>
+        <li><a href="https://www.uwlanc.org" target="_blank">United Way of Lancaster County</a></li>
+        <li><a href="https://oneunitedlancaster.com/" target="_blank">One United Lancaster</a></li>
+        <li><a href="https://illuccixhcp.com/" target="_blank">Illuccix HCP</a> <small>(development only)</small></li>
+        <li><a href="https://illuccix.com/" target="_blank">Illuccix Patient</a> <small>(development only)</small></li>
+        <li><a href="https://horseinnlancaster.com/" target="_blank">Horse Inn</a></li>
+        <li><a href="https://philthygood.com/" target="_blank">Philthy Good</a></li>
+        <li><a href="https://columbiapamarkethouse.org/" target="_blank">Columbia Market House</a></li>
+        <li><a href="https://first10lancaster.com/" target="_blank">First 10 Lancaster</a></li>
+        <li><a href="https://lititzpride.org/" target="_blank">Lititz Chooses Love</a></li>
+        <li><a href="https://lancastercountycase.com/" target="_blank">Lancaster County CASE</a></li>
+        <li><a href="https://jessicasmucker.com/" target="_blank">Jessica Smucker Music</a></li>
+        <li><a href="https://somervillemanning.com/" target="_blank">Somerville Manning Gallery</a></li>
+        <li><a href="https://heyjinx.com/" target="_blank">HeyJinx! Design</a></li>
+        <li><a href="https://lanc.care/" target="_blank">Lanc.Care</a></li>
     </ul>
     
     <h3>Logo and Branding:</h3>
     <ul>
-        <li>https://heyjinx.com/</li>
-        <li>https://jessicasmucker.com/</li>
-        <li>https://philthygood.com/</li>
-        <li>https://careerreadylancaster.com/</li>
-        <li>https://www.bowerydevelopmentco.com/</li>
-        <li>https://thealistair.rentpmi.com/ (including naming of building)</li>
+        <li><a href="https://heyjinx.com/" target="_blank">HeyJinx! Design</a></li>
+        <li><a href="https://jessicasmucker.com/" target="_blank">Jessica Smucker Music</a></li>
+        <li><a href="https://philthygood.com/" target="_blank">Philthy Good</a></li>
+        <li><a href="https://careerreadylancaster.com/" target="_blank">Career Ready Lancaster!</a></li>
+        <li><a href="https://www.bowerydevelopmentco.com/" target="_blank">Bowery Development Co.</a></li>
+        <li><a href="https://thealistair.rentpmi.com/" target="_blank">The Alistair</a> <small>(including naming of building)</small></li>
     </ul>
 </section>
 
@@ -186,7 +188,25 @@
   </script>
   
   <style scoped>
-  section + section {
+
+.pre-title {
+	margin-bottom: -14px;
+}
+
+  section {
     border-top: solid 1px;
   }
+
+  main .note {
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  main .note a {
+    display: inline-block;
+  }
+
+  main #work a {
+	text-decoration-thickness: 0.15rem;
+}
   </style>

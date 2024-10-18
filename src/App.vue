@@ -95,6 +95,8 @@ export default {
 
 :root {
   --highlight: #c4c238;
+  --highlighter: #ddd900;
+  --just-white: #fff;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -162,6 +164,13 @@ main a {
 text-decoration-thickness: 0.3rem;
 }
 
+main .note a {
+	background: var(--highlighter);
+	padding: 30px 60px;
+	border-radius: 10px;
+	text-decoration-color: var(--just-white);
+	font-size: 1.4rem;
+}
 
 .flex-posts {
     display: flex;
