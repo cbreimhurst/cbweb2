@@ -1,20 +1,10 @@
 <template>
-  <main class="post individual">
-    <h1>Contact</h1>
-<form name="contact"  netlify>
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+  <main class="post">
+    <header>
+      <h1>Contact</h1>
+      <p>Reach me here: <a href="mailto:cbreimhurst@gmail.com">cbreimhurst@gmail.com</a></p>
+      
+    </header>
   </main>
 </template>
 
