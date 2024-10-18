@@ -28,7 +28,7 @@ export default {
     return {
       title: 'Chris Breimhurst',
       about: 'Web developer, branding specialist, commercial artist, from Lancaster, Pennsylvania.',
-      copyright: '© 2021 Chris Breimhurst',
+      copyright: '© 2021 - 2024 Chris Breimhurst',
       selectedTag: null,
       activeClass: "active"
     };
@@ -119,6 +119,11 @@ body {
   max-width: 100vw;
   box-sizing: border-box;
 }
+
+header {
+	text-align: center;
+}
+
 h1 {
   margin-top: 0;
     font-family: 'Fraunces', serif;
