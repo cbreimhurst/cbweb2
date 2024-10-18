@@ -6,6 +6,15 @@
          <router-view></router-view>
     </transition>
 
+
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resume">Resume</a></li>
+        </ul>
+        </nav>
+    </footer>
         <p class="copyright" v-html="copyright"></p>
   </div>
 </template>
@@ -290,6 +299,20 @@ text-decoration-thickness: 0.3rem;
 }
 }
 
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+nav ul a {
+	padding: 10px;
+}
 
 code {
     border-radius: 5px;
