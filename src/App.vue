@@ -1,7 +1,15 @@
 <template>
   <div id="app">
-    <pre style="text-align: left;">
-    </pre>
+    <header id="sitewide"><img src="https://data.christopherbreimhurst.com/wp-content/uploads/2024/10/ginkgo-leaf.svg" alt=""><span>Chris Breimhurst</span>
+
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resume">Resume</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        </nav>
+      </header>
     <transition name="fade">
          <router-view></router-view>
     </transition>
@@ -279,6 +287,18 @@ text-decoration-thickness: 0.3rem;
   }
 }
 
+#sitewide nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	gap: 20px;
+	align-items: center;
+}
+
+#sitewide nav ul a {
+	padding: 10px;
+}
 
 
 @media screen and (max-width: 668px) {
@@ -290,6 +310,10 @@ text-decoration-thickness: 0.3rem;
   main .note a {
 	padding: 20px 30px;
 	font-size: 1rem;
+}
+
+#sitewide nav ul {
+display: none;
 }
 
 
@@ -306,7 +330,12 @@ text-decoration-thickness: 0.3rem;
 }
 
 
-nav ul {
+#sitewide span {
+	margin-right: auto;
+}
+
+
+footer nav ul {
 	display: flex;
 	list-style: none;
 	margin: 0 auto;
@@ -316,7 +345,7 @@ nav ul {
 	justify-content: center;
 }
 
-nav ul a {
+footer nav ul a {
 	padding: 10px;
 }
 
@@ -331,4 +360,20 @@ box-sizing: border-box;
 overflow-y: scroll;
 }
 
+
+
+
+#sitewide {
+  text-align: left;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+#sitewide img {
+  height: 20px;
+  margin-right: 8px;
+}
 </style>
