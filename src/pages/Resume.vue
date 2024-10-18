@@ -256,6 +256,18 @@ section strong, section h2 {
 }
 
 
+#experieince header {
+  position: relative;
+}
+#experieince header:before {
+  content: "";
+  height: 100%;
+  width: 6px;
+  background: var(--highlight);
+  top: 0;
+  left: -30px;
+  position: absolute;
+}
 
 section article h3 {
   margin-bottom: 4px;
