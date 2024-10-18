@@ -2,7 +2,8 @@
       <main>
          <header v-if="this.info">
          <h1 v-html="info.name"></h1>
-        <p v-html="info.description"></p>
+         <p v-html="info.description"></p>
+         <p class="note">Ready for hire! Check out my CV</p>
          </header>
         <div v-if="!this.$store.state.posts" class="u-align-center">
           <div class="lds-ripple"><div></div><div></div></div>
