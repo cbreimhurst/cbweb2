@@ -287,6 +287,11 @@ text-decoration-thickness: 0.3rem;
     margin: 0 0 30px 0;
     width: 100%;
   }
+  main .note a {
+	padding: 20px 30px;
+	font-size: 1rem;
+}
+
 
   @supports (grid-template-rows: masonry) {
 .flex-posts {
@@ -296,10 +301,6 @@ text-decoration-thickness: 0.3rem;
   grid-gap: 1rem;
 }
 
-main .note a {
-	padding: 20px 30px;
-	font-size: 1rem;
-}
 
 }
 }
