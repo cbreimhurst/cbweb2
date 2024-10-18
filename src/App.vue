@@ -179,6 +179,7 @@ h1 {
     text-align: left;
   margin-bottom: 0;
   text-align: center;
+  letter-spacing: -5px;
 }
 
 
@@ -269,6 +270,7 @@ main .note a {
     text-decoration-thickness: 12px;
   text-underline-offset: -8px;
   text-decoration-skip-ink: none;
+  letter-spacing: -2px;
 }
 .flex-posts .post h3 a {
     text-decoration: none;
