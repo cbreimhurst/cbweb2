@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       title: 'Chris Breimhurst',
-      about: 'Commercial artist, web developer, & branding specialist from Lancaster, Pennsylvania.',
+      about: 'Web developer, branding specialist, commercial artist, from Lancaster, Pennsylvania.',
       copyright: '© 2021 Chris Breimhurst',
       selectedTag: null,
       activeClass: "active"
