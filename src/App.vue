@@ -138,6 +138,7 @@ export default {
   --blue: #76ecff;
   --just-white: #fff;
   --grey: #2c3e50;
+  --ink: #080c10;
   --parch: #fefcf6;
 }
 
@@ -220,7 +221,19 @@ main .note a {
 	border-radius: 10px;
 	text-decoration-color: var(--just-white);
 	font-size: 1.4rem;
+  transition: all ease .2s;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 12px;
+  text-underline-offset: -7px;
 }
+
+
+main .note a:hover {
+  background: var(--highlight);
+  text-decoration-thickness: 6px;
+  text-underline-offset: -3px;
+}
+
 
 .flex-posts {
     display: flex;
@@ -471,5 +484,76 @@ overflow-y: scroll;
 #sitewide img {
   height: 20px;
   margin-right: 8px;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--grey);
+    color: var(--parch);
+  }
+  
+  #app,
+   main a {
+    color: var(--parch);
+  }
+  
+  .site-logo,
+    nav ul a {
+    color: var(--parch);
+    background: var(--grey);
+  }
+  
+  nav ul a  {
+    text-decoration-color: var(--ink);
+  }
+   
+   .site-logo:hover,
+     nav ul a:hover,
+   main .note a{
+    color: var(--grey);
+  }
+
+
+
+.flex-posts .post h3 {
+  text-decoration-color: var(--ink);
+  transition: all ease .2s;
+}
+
+.flex-posts .post:hover h3 {
+  text-decoration-color: var(--highlight);
+}
+
+.flex-posts .post {
+  border-color: var(--ink);
+  transition: all ease .2s;
+  background: var(--gray);
+}
+
+.flex-posts .post:hover {
+  border-color: var(--highlight);
+  background: var(--ink);
+}
+
+main .note a {
+	background: var(--highlight);
+}
+
+main .note a:hover {
+	background: var(--highlighter);
+}
+
+
+.post article a {
+  color: var(--blue);
+  transition: all ease .2s;
+}
+
+.post article a:hover {
+  color: var(--just-white);
+}
+  
 }
 </style>
