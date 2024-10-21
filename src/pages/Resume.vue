@@ -76,7 +76,7 @@
              <li><strong>Design and Template Creation:</strong> Replicated the design and user interface of the organization's website, including layout, color schemes and fonts, to create a customizable template for the dynamic integration of Planned Giving marketing content.</li>
              <li><strong>Content Management:</strong> Regularly updated and modified content based on customer requests received via email or phone, ensuring timely and accurate adjustments.</li>
              <li><strong>Brand Consistency:</strong> Ensured seamless user experience throughout all updates and improvements.</li>
-             <li><strong>Feature Development:</strong> Added new features to the proprietary platform to improve both the developer experience and the product offering, enhancing usability, efficiency, and overall functionality. Rewrote legacy styles and scripts when newer Web APIs became available. Platform was built in PHP and MySQL.</li>
+             <li><strong>Feature Development:</strong> Added new features to the proprietary platform to improve both the developer experience and the product offering, enhancing usability, efficiency, and overall functionality. Refactored legacy styles and scripts when newer Web APIs became available. Platform was built in PHP and MySQL.</li>
          </ul>
          
      </article>
@@ -84,12 +84,12 @@
      <article id="additional">
          <h2>Additional Experience:</h2>
          <ul class="adjusted">
-         <li><strong>Kimberton Whole Foods</strong>, February 2009 - June 2013 (intermittently)<br>
+         <li><strong>Kimberton Whole Foods</strong> - <em>February 2009 - June 2013 (intermittently)</em><br>
             Assistant Store Coordinator - Downingtown location,<br>
             Perishables Supervisor - Warehouse location</li>
-         <li><strong>Lancaster Farm Fresh Cooperative</strong>, June 2011 - June 2012<br>
+         <li><strong>Lancaster Farm Fresh Cooperative</strong> - <em>June 2011 - June 2012</em><br>
             Operational Coordinator for Community Supported Agriculture (CSA) Program</li>
-         <li><strong>Home Field Advantage, Ltd.</strong>, January 1998 - August 2006 (intermittently)<br>
+         <li><strong>Home Field Advantage, Ltd.</strong> - <em>January 1998 - August 2006 (intermittently)</em><br>
             Various roles, including design work, 3D modeling of houses, brochure design, web development, and field construction</li>
             </ul>
          
@@ -101,33 +101,45 @@
     <article id="education">
         <h3>Education:</h3>
         
-        <p>
-            Bachelors of Science in General Studies, Art Concentration,  May 2006
-            Kutztown University of Pennsylvania
-        </p>
+        <ul class="adjusted">
+
+          <li>
+            <strong>Kutztown University of Pennsylvania</strong> - <em>May 2006</em><br>
+              Bachelors of Science in General Studies, Art Concentration
+          </li>
+        </ul>
         
     </article>
     
     <article id="computer-skills">
         
         <h3>Computer Skills:</h3>
-        <p>
-            Microsoft Word, Excel, Powerpoint<br>
-            Adobe Photoshop, Lightroom, Illustrator, InDesign, Premiere, XD<br>
-            Sketch<br>
-            Figma<br>
-            cPanel
-        </p>
+        <ul>
+            <li>Microsoft Word, Excel, Powerpoint</li>
+            <li>Adobe Photoshop, Lightroom, Illustrator, InDesign, Premiere, XD</li>
+            <li>Sketch</li>
+            <li>Figma</li>
+            <li>cPanel</li>
+        </ul>
         
     </article>
 
     <article id="programing-lang">
         <h3>Programming Languages:</h3>
-        <p>HTML, CSS, JS, PHP, MySQL</p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>PHP</li>
+          <li>MySQL</li>
+        </ul>
     </article>
     <article id="programing-frame">
         <h3>Programming Frameworks:</h3>
-        <p>WordPress, Vue</p>
+        <ul>
+          <li>WordPress</li>
+          <li>Vue</li>
+        </ul>
     </article>
     
     <article id="volunteering">
