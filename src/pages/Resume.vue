@@ -194,11 +194,13 @@
     </article>
 </section>
 
-<section>
+<section id="references">
     
-    <h2>References:</h2>
+    <h2>References</h2>
     
-    <p>Available Upon Request</p>
+    <article>
+      <p><a href="/contact">Available Upon Request</a></p>
+    </article>
     
 </section>
 
@@ -241,6 +243,10 @@
 
 #intro {
 	width: 100%;
+}
+
+section {
+  width: 100%;
 }
 
 section strong, section h2 {
