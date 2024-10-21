@@ -89,6 +89,14 @@
             Perishables Supervisor - Warehouse location</li>
          <li><strong>Lancaster Farm Fresh Cooperative</strong> - <em>June 2011 - June 2012</em><br>
             Operational Coordinator for Community Supported Agriculture (CSA) Program</li>
+            <li>
+              <strong>Whole Foods Market</strong> – <em>June 2007 – February 2009</em><br>
+              Grocery clerk with a focus on dairy; merchandise ordering and inventory; trainer -  Portland, Maine location
+            </li>
+            <li>
+              <strong>Redners Warehouse Market</strong> – <em> August 2001 – April 2007</em><br>
+              Customer service lead; cashier; grocery clerk (including dairy and frozen); grocery receiver; deli server; produce clerk and preparation; merchandise ordering and inventory management
+            </li>
          <li><strong>Home Field Advantage, Ltd.</strong> - <em>January 1998 - August 2006 (intermittently)</em><br>
             Various roles, including design work, 3D modeling of houses, brochure design, web development, and field construction</li>
             </ul>
