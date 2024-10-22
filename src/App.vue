@@ -29,6 +29,8 @@
 
     <footer>
 
+
+
       <svg version="1.1" id="Layer_1" xmlns:serif="http://www.serif.com/" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72.5 80.7" style="enable-background:new 0 0 72.5 80.7;" xml:space="preserve">
 <g transform="matrix(0.280224,-0.191152,0.229163,0.335947,-99.7633,30.8267)">
 	<path class="st0" d="M326.2,153.8l12.3-32.5c0,0,84.3-3.3,116.1,74.3c0,0-93.1,23.3-118.6,61.9c0,0-3.6,55,4.6,68.8
@@ -36,6 +38,14 @@
 		c-27.5-37.2-121.7-55.7-121.7-55.7c27.7-79.1,112.1-80.2,112.1-80.2L326.2,153.8z"/>
 </g>
 </svg>
+
+
+    <div v-if="quotes">
+        <p v-html="quotes.content.rendered"></p>
+    </div>
+
+    
+
 
       <nav>
         <ul>
@@ -81,13 +91,17 @@ export default {
     posts() {
       return this.$store.state.posts;
     },
+    quotes() {
+      return this.$store.state.quotes;
+    },
     tags() {
       return this.$store.state.tags;
     },
     sortedPosts() {
       if (!this.selectedTag) return this.posts;
       return this.posts.filter(el => el.tags.includes(this.selectedTag));
-    }
+    },
+
   },
 
   serverPrefetch () {
@@ -102,6 +116,9 @@ export default {
     if (!this.posts) {
       this.fetchPosts()
     }
+    if (!this.quotes) {
+      this.fetchQuotes()
+    }
     if (!this.info) {
       this.fetchInfo()
     }
@@ -113,6 +130,11 @@ export default {
       // return the Promise from the action
       return this.$store.dispatch('getPosts')
     },
+    fetchQuotes () {
+      // return the Promise from the action
+      return this.$store.dispatch('getQuotes')
+    },
+
     fetchInfo () {
       // return the Promise from the action
       return this.$store.dispatch('getInfo')

@@ -1,4 +1,5 @@
 const postREST = "https://data.christopherbreimhurst.com/wp-json/wp/v2/posts?page=1&per_page=20&_embed=1"
+const quoteREST = "https://data.christopherbreimhurst.com/wp-json/wp/v2/quote?page=1&per_page=20&_embed=1"
 const siteREST = "https://data.christopherbreimhurst.com/wp-json/"
 
 
@@ -15,6 +16,7 @@ export default new Vuex.Store({
   state: {
     isLoading: false,
     posts: null,
+    quotes: null,
     post: null,
     info: null
   },
@@ -24,12 +26,16 @@ export default new Vuex.Store({
     loadingState (state, { isLoading }) {
       state.isLoading = isLoading
     },
-
     storePosts(state, response) {
-      state.posts = response },
-
+      state.posts = response 
+    },
+    storeQuotes(state, response) {
+      var picked = Math.floor(Math.random() * response.length);
+      state.quotes = response[picked] 
+    },
     storeInfo(state, response) {
-      state.info = response }
+      state.info = response 
+    }
   },
 
 
@@ -55,6 +61,31 @@ export default new Vuex.Store({
         
           payload.state.isLoading = false
         reject(error);
+        });
+      }
+      })
+    },
+
+    getQuotes: function(payload) {
+      console.log(payload)
+      payload.state.isLoading = true
+
+      return new Promise((resolve, reject) => { 
+      if(payload.state.quotes) {
+        payload.state.isLoading = false
+        resolve()
+      }
+      else {
+        axios.get(quoteREST)
+        .then((response) => {
+          console.log(response)
+
+          payload.commit('storeQuotes', response.data)
+          payload.state.isLoading = false
+        resolve()
+        }).catch((error) => {
+          payload.state.isLoading = false
+          reject(error);
         });
       }
       })
