@@ -180,6 +180,7 @@
             <li><a href="https://horseinnlancaster.com/" target="_blank">Horse Inn</a></li>
             <li><a href="https://philthygood.com/" target="_blank">Philthy Good</a></li>
             <li><a href="https://columbiapamarkethouse.org/" target="_blank">Columbia Market House</a></li>
+            <li><a href="https://www.loomisco.com/" target="_blank">The Loomis Company</a></li>
             <li><a href="https://first10lancaster.com/" target="_blank">First 10 Lancaster</a></li>
             <li><a href="https://lititzpride.org/" target="_blank">Lititz Chooses Love</a></li>
             <li><a href="https://lancastercountycase.com/" target="_blank">Lancaster County CASE</a></li>
